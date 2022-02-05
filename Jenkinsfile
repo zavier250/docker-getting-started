@@ -1,6 +1,7 @@
 pipeline {
-    stages {      
-
+    agent any
+    
+    stages {
         stage('Build Docker image') {
             steps {
                 sh 'docker build -t docker-getting-started .'
