@@ -3,9 +3,7 @@ pipeline {
 
         stage('Build Docker image') {
             steps {
-                def built_img = ''
-                built_img = docker.build('./')
-                built_img.tag('docker-getting-started')
+                sh 'docker build -t docker-getting-started .'
             }
         }
 
