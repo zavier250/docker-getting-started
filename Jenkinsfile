@@ -1,8 +1,5 @@
 pipeline {
     stages {      
-        stage('Clone repository') {
-          checkout scm
-        }
 
         stage('Build Docker image') {
             def built_img = ''
