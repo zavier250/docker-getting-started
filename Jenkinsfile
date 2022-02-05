@@ -1,13 +1,13 @@
 pipeline {
-    stages {
-        def built_img
-        
+    stages {      
         stage('Clone repository') {
           checkout scm
         }
 
         stage('Build Docker image') {
-          built_img = docker.build('./')
+            def built_img = ''
+            built_img = docker.build('./')
+            built_img.tag('docker-getting-started')
         }
 
         stage('Run Docker Container') {
