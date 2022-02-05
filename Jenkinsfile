@@ -1,7 +1,7 @@
 pipeline {
-    def built_img
-  
     stages {
+        def built_img
+        
         stage('Clone repository') {
           checkout scm
         }
