@@ -3,11 +3,11 @@ pipeline {
     
     stages {
         
-        stage('Switch to root') {
-            steps {
-                sh 'sudo -i'
-            }
-        }
+//         stage('Switch to root') {
+//             steps {
+//                 sh 'sudo -i'
+//             }
+//         }
         stage('Build Docker image') {
             steps {
                 sh 'docker build -t docker-getting-started .'
