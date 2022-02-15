@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build Docker image') {
             steps {
-                sh 'docker build -t docker-getting-started .'
+                sh 'sudo docker build -t docker-getting-started .'
             }
         }
 
